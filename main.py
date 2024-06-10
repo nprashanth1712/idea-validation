@@ -4,6 +4,8 @@ from streamlit import session_state as ss
 # Import modules
 from openai_backend import Assistant
 
+api_key=st.secrets["openai_secret_key"]
+
 # Initialize agent
 if 'agent' not in ss:
     ss.agent = Assistant()
@@ -12,12 +14,12 @@ if 'agent' not in ss:
 
 # Streamlit app configuration
 st.set_page_config(
-    page_title="IdeaValidation",
+    page_title="Idea validation",
     page_icon="💡",
 )
 
 # App title
-st.title("💡:blue[Idea Validation] :red[Chatbot]")
+st.title("🛫:blue[Idea Validation] :red[Chatbot]")
 
 # Display initial message if not shown before
 if not ss.initial_message_shown:
@@ -31,7 +33,7 @@ for message in ss.chat_history:
         st.markdown(message["content"])
 
 # Accept user input
-if prompt := st.chat_input("Paste your Idea here!"):
+if prompt := st.chat_input("Enter your idea here to validate!"):
     # Display user message in chat message container
     with st.chat_message("user"):
         st.markdown(prompt)
