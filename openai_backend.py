@@ -21,7 +21,7 @@ import os
 #client = openai.OpenAI (st.secrets["openai_secret_key"])
 client = openai.OpenAI(api_key=api_key)
 model = 'gpt-3.5-turbo-0125'
-assistant_id = 'asst_gPElzigeg2XXJH8cJg6IuZoq'
+assistant_id = 'asst_4vVixeLVYB3Rr3210hXG1bHd'
 
 class Assistant:
     thread_id = ""
