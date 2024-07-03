@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 # App title
-st.title("🛫:blue[Idea Validation] :red[Chatbot]")
+st.title("💡:blue[Idea Validation] :red[Chatbot]")
 
 # Display initial message if not shown before
 if not ss.initial_message_shown:
